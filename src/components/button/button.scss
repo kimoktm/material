@@ -1,10 +1,11 @@
-$button-border-radius: 3px !default;
+$button-border-radius: 4px !default;
+$button-border-width: 1px !default;
 $button-fab-border-radius: 50% !default;
 $button-icon-border-radius: $button-fab-border-radius !default;
 
-$button-line-height: rem(3.60) !default;
+$button-line-height: rem(4.00) !default;
 $button-margin: rem(0.600) rem(0.800) !default;
-$button-min-width: rem(8.800) !default;
+$button-min-width: rem(11.400) !default;
 $button-padding: 0 $button-left-right-padding !default;
 
 
@@ -56,8 +57,8 @@ button.md-button::-moz-focus-inner {
   white-space: nowrap;
 
   /* Uppercase text content */
-  text-transform: uppercase;
-  font-weight: 500;
+  // text-transform: uppercase;
+  font-weight: 600;
   font-size: $body-font-size-base;
   font-style: inherit;
   font-variant: inherit;
@@ -94,11 +95,19 @@ button.md-button::-moz-focus-inner {
     background: none;
   }
 
-  &.md-raised {
-    &:not([disabled]) {
-      @include md-shadow-bottom-z-1();
-    }
+  &.md-lined {
+    border-style: solid;
+    border-width: $button-border-width;
+    line-height: $button-line-height - $button-border-width * 2;
+    min-height: $button-line-height - $button-border-width * 2;
+    min-width: $button-min-width  - $button-border-width * 2;
   }
+
+  // &.md-raised {
+  //   &:not([disabled]) {
+  //     @include md-shadow-bottom-z-1();
+  //   }
+  // }
 
   &.md-icon-button {
     margin: 0 $icon-button-margin;
@@ -131,7 +140,7 @@ button.md-button::-moz-focus-inner {
     height: $button-fab-height;
     vertical-align: middle;
 
-    @include md-shadow-bottom-z-1();
+    // @include md-shadow-bottom-z-1();
     border-radius: $button-fab-border-radius;
     background-clip: padding-box;
     overflow: hidden;
@@ -157,17 +166,17 @@ button.md-button::-moz-focus-inner {
     }
   }
 
-  &:not([disabled]) {
-    &.md-raised,
-    &.md-fab {
-      &.md-focused {
-        @include md-shadow-bottom-z-1();
-      }
-      &:active {
-        @include md-shadow-bottom-z-2();
-      }
-    }
-  }
+  // &:not([disabled]) {
+  //   &.md-raised,
+  //   &.md-fab {
+  //     &.md-focused {
+  //       @include md-shadow-bottom-z-1();
+  //     }
+  //     &:active {
+  //       @include md-shadow-bottom-z-2();
+  //     }
+  //   }
+  // }
 
   .md-ripple-container {
     border-radius: $button-border-radius;

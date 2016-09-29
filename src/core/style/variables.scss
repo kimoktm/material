@@ -1,6 +1,6 @@
 // Typography
 // ------------------------------
-$font-family: Roboto, 'Helvetica Neue', sans-serif !default;
+$font-family: 'Open Sans', 'Helvetica Neue', sans-serif !default;
 $font-size:   10px !default;
 
 //-- Must be defined before $font-size.
@@ -43,7 +43,6 @@ $toast-height: $baseline-grid * 3 !default;
 $toast-margin: $baseline-grid * 1 !default;
 
 // Whiteframes
-
 $shadow-key-umbra-opacity:      0.2 !default;
 $shadow-key-penumbra-opacity:   0.14 !default;
 $shadow-ambient-shadow-opacity: 0.12 !default;
@@ -130,4 +129,9 @@ $button-fab-padding: rem(1.60) !default;
 $checkbox-width: 20px !default;
 $checkbox-height: $checkbox-width !default;
 $checkbox-border-radius: 2px !default;
-$checkbox-border-width: 2px !default;
+$checkbox-border-width: 1px !default;
+
+
+// Shared delete icons variables
+$delete-icon-scale: 0.65;
+

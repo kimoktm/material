@@ -10,8 +10,8 @@
 }
 .md-THEME_NAME-theme {
   .md-calendar-day-header {
-    background: '{{background-300}}';
-    color: '{{background-A200-0.87}}';
+    background: '{{primary-color}}';
+    color: '{{primary-500-contrast}}'; // white
   }
 
   .md-calendar-date.md-calendar-date-today {
@@ -36,7 +36,7 @@
   .md-calendar-date.md-calendar-selected-date,
   .md-calendar-date.md-focus.md-calendar-selected-date {
     .md-calendar-date-selection-indicator {
-      background: '{{primary-500}}'; // blue-500
+      background: '{{background-400}}';
       color: '{{primary-500-contrast}}'; // white
       border-color: transparent;
     }

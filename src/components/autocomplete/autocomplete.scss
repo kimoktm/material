@@ -1,5 +1,7 @@
 // The default item height is also specified in the JavaScript.
-$md-autocomplete-item-height: 48px !default;
+$md-autocomplete-border-radius: 4px !default;
+$md-autocomplete-item-height: rem(3.80) !default;
+$md-autocomplete-input-height: rem(4.00) !default;
 
 @keyframes md-autocomplete-list-out {
   0% {
@@ -7,7 +9,7 @@ $md-autocomplete-item-height: 48px !default;
   }
   50% {
     opacity: 0;
-    height: 40px;
+    height: $md-autocomplete-input-height;
     animation-timing-function: ease-in;
   }
   100% {
@@ -24,18 +26,18 @@ $md-autocomplete-item-height: 48px !default;
   }
   50% {
     opacity: 0;
-    height: 40px;
+    height: $md-autocomplete-input-height;
   }
   100% {
     opacity: 1;
-    height: 40px;
+    height: $md-autocomplete-input-height;
   }
 }
 
 md-autocomplete {
-  border-radius: 2px;
+  border-radius: $md-autocomplete-border-radius;
   display: block;
-  height: 40px;
+  height: $md-autocomplete-input-height;
   position: relative;
   overflow: visible;
   min-width: 190px;
@@ -73,7 +75,7 @@ md-autocomplete {
 
     position: relative;
     overflow: visible;
-    height: 40px;
+    height: $md-autocomplete-input-height;
     &.md-menu-showing {
       z-index: $z-index-backdrop + 1;
     }
@@ -91,7 +93,7 @@ md-autocomplete {
       left: 0;
       // When `md-inline` is present, we adjust the offset to go over the `ng-message` space
       &.md-inline {
-        bottom: 40px;
+        bottom: $md-autocomplete-input-height;
         right: 2px;
         left: 2px;
         width: auto;
@@ -127,8 +129,8 @@ md-autocomplete {
     @include md-flat-input();
     width: 100%;
     padding: 0 15px;
-    line-height: 40px;
-    height: 40px;
+    line-height: $md-autocomplete-input-height;
+    height: $md-autocomplete-input-height;
   }
   button {
     position: relative;
@@ -140,7 +142,7 @@ md-autocomplete {
     border: none;
     border-radius: 50%;
     padding: 0;
-    font-size: 12px;
+    font-size: $caption-font-size-base;
     background: transparent;
     margin: auto 5px;
     &:after {
@@ -167,7 +169,7 @@ md-autocomplete {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate3d(-50%, -50%, 0) scale(0.9);
+      transform: translate3d(-50%, -50%, 0) scale($delete-icon-scale);
       path {
         stroke-width: 0;
       }
@@ -215,7 +217,7 @@ md-autocomplete {
   padding: 0;
 
   li {
-    font-size: 14px;
+    font-size: $body-font-size-base;
     overflow: hidden;
     padding: 0 15px;
     line-height: $md-autocomplete-item-height;

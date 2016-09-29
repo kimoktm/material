@@ -1799,7 +1799,7 @@ describe('<md-autocomplete>', function() {
   describe('dropdown position', function() {
 
     var DEFAULT_MAX_ITEMS = 5;
-    var DEFAULT_ITEM_HEIGHT = 48;
+    var DEFAULT_ITEM_HEIGHT = 38;
 
     var dropdownItems = DEFAULT_MAX_ITEMS;
 

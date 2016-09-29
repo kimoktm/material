@@ -85,7 +85,7 @@ h2 {
 }
 h3 {
   font-size: 2.000rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.005em;
 }
 h4 {
@@ -95,14 +95,14 @@ h4 {
   line-height: 2.4rem;
 }
 p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.010em;
-  line-height: 1.6em;
-  margin: 0.8em 0 1.6em;
+  line-height: 1.4em;
+  margin: 0.8em 0 1.4em;
 }
 strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .md-api-table td,
@@ -269,6 +269,7 @@ code:not(.highlight) {
 }
 
 .docs-menu .md-button {
+  border: 0;
   border-radius: 0;
   color: white;
   cursor: pointer;
@@ -367,7 +368,7 @@ body[dir=rtl] .menu-heading {
   padding: 0 16px 0 32px;
   text-transform: none;
   text-rendering: optimizeLegibility;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .parent-list-item:last-child {
@@ -650,7 +651,7 @@ ul.buckets li md-card md-card-content {
 }
 ul.buckets li a {
   display: block;
-  font-weight: 500;
+  font-weight: 600;
   padding: 16px 0;
   text-decoration: none;
   -webkit-transition: all 0.45s cubic-bezier(0.35, 0, 0.25, 1);

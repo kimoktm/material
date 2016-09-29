@@ -64,7 +64,7 @@
 
 @mixin md-title() {
   font-size: $title-font-size-base;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.005em;
 }
 
@@ -77,7 +77,7 @@
 
 @mixin md-body-2() {
   font-size: $body-font-size-base;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.010em;
   line-height: rem(2.4);
 }
@@ -237,7 +237,7 @@
   }
 
   &#{$checkedSelector} .md-icon {
-    border-color: transparent;
+    // border-color: transparent;
 
     &:after {
       box-sizing: border-box;
@@ -248,7 +248,7 @@
       display: table;
       width: $width / 3;
       height: $width * 2 / 3;
-      border-width: $border-width;
+      border-width: $border-width * 2;
       border-style: solid;
       border-top: 0;
       border-left: 0;
