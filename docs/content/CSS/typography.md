@@ -80,13 +80,13 @@ consistency across your application.
         <span flex="25" class="docs-definition" aria-describedby="headings-selectors">
           <code>.md-display-1</code>
         </span>
-        <h5 aria-describedby="headings-output" class="md-display-1 docs-output">Regular 34px</h5>
+        <h5 aria-describedby="headings-output" class="md-display-1 docs-output">Bold 36px</h5>
       </li>
       <li layout="row" layout-align="start center">
         <span flex="25" class="docs-definition" aria-describedby="headings-selectors">
           <code>.md-headline</code>
         </span>
-        <h5 aria-describedby="headings-output" class="md-headline docs-output">Regular 24px</h5>
+        <h5 aria-describedby="headings-output" class="md-headline docs-output">Regular 30px</h5>
       </li>
       <li layout="row" layout-align="start center">
         <span flex="25" class="docs-definition" aria-describedby="headings-selectors">
@@ -98,7 +98,7 @@ consistency across your application.
         <span flex="25" class="docs-definition" aria-describedby="headings-selectors">
           <code>.md-subhead</code>
         </span>
-        <h5 aria-describedby="headings-output" class="md-subhead docs-output">Regular 16px</h5>
+        <h5 aria-describedby="headings-output" class="md-subhead docs-output">Regular 18px</h5>
       </li>
     </ul>
     <h4 class="md-title">Example</h4>

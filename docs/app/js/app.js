@@ -40,22 +40,22 @@ function(SERVICES, COMPONENTS, DEMOS, PAGES,
       templateUrl: 'partials/license.tmpl.html'
     });
   $mdThemingProvider.definePalette('docs-blue', $mdThemingProvider.extendPalette('green', {
-        '50': '#042e1a',
-        '100': '#064627',
-        '200': '#075e34',
-        '300': '#097541',
-        '400': '#0b8d4e',
+        // '50': '#042e1a',
+        // '100': '#064627',
+        // '200': '#075e34',
+        // '300': '#097541',
+        // '400': '#0b8d4e',
         '500': '#0da45b',
-        '600': '#11d475',
-        '700': '#13eb82',
-        '800': '#2aee8f',
-        '900': '#41f09b',
-    'contrastDefaultColor': 'light',
-    'contrastDarkColors': '50 100 200 A100',
-    'contrastStrongLightColors': '300 400 A200 A400'
+        // '600': '#11d475',
+        // '700': '#13eb82',
+        // '800': '#2aee8f',
+        // '900': '#41f09b',
+    // 'contrastDefaultColor': 'light',
+    // 'contrastDarkColors': '50 100 200 A100',
+    // 'contrastStrongLightColors': '300 400 A200 A400'
   }));
   $mdThemingProvider.definePalette('docs-red', $mdThemingProvider.extendPalette('blue', {
-    'A100': '#DE3641'
+    // 'A100': '#DE3641'
   }));
 
   $mdThemingProvider.theme('docs-dark', 'default')
@@ -64,10 +64,15 @@ function(SERVICES, COMPONENTS, DEMOS, PAGES,
 
   $mdIconProvider.icon('md-toggle-arrow', 'img/icons/toggle-arrow.svg', 48);
 
+  $mdThemingProvider.definePalette('background', $mdThemingProvider.extendPalette('grey', {
+    '50': '#FFFFFF'
+  }));
+
+
   $mdThemingProvider.theme('default')
       .primaryPalette('docs-blue')
-      .accentPalette('docs-red');
-
+      .accentPalette('docs-red')
+      .backgroundPalette('background');
   $mdThemingProvider
       .enableBrowserColor();
 

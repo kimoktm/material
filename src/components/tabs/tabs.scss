@@ -1,6 +1,5 @@
 $tabs-paginator-width: $baseline-grid * 4 !default;
 $tabs-tab-width: $baseline-grid * 12 !default;
-$tabs-header-height: 48px !default;
 
 @keyframes md-tab-content-hide {
   0% { opacity: 1; }
@@ -248,7 +247,7 @@ md-tab {
 }
 
 .md-tab {
-  font-size: 14px;
+  // font-size: 14px;
   text-align: center;
   line-height: $tabs-header-height - 24;
   padding: 12px 24px;
@@ -256,9 +255,9 @@ md-tab {
   cursor: pointer;
   white-space: nowrap;
   position: relative;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   @include rtl(float, left, right);
-  font-weight: 600;
+  font-weight: 500;
   box-sizing: border-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -279,6 +278,9 @@ md-tab {
   }
   &.ng-leave {
     transition: none;
+  }
+  .md-ripple-container {
+    display: none;
   }
 }
 

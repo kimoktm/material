@@ -1,6 +1,6 @@
 // Typography
 // ------------------------------
-$font-family: 'Open Sans', 'Helvetica Neue', sans-serif !default;
+$font-family: 'Roboto', 'Helvetica Neue', sans-serif !default;
 $font-size:   10px !default;
 
 //-- Must be defined before $font-size.
@@ -11,10 +11,10 @@ $font-size:   10px !default;
 $display-4-font-size-base: rem(11.20) !default;
 $display-3-font-size-base: rem(5.600) !default;
 $display-2-font-size-base: rem(4.500) !default;
-$display-1-font-size-base: rem(3.400) !default;
-$headline-font-size-base:  rem(2.400) !default;
+$display-1-font-size-base: rem(3.600) !default;
+$headline-font-size-base:  rem(3.000) !default;
 $title-font-size-base:     rem(2.000) !default;
-$subhead-font-size-base:   rem(1.600) !default;
+$subhead-font-size-base:   rem(1.800) !default;
 
 $body-font-size-base:      rem(1.400) !default;
 $caption-font-size-base:   rem(1.200) !default;
@@ -30,17 +30,86 @@ $layout-breakpoint-sm:     960px !default;
 $layout-breakpoint-md:     1280px !default;
 $layout-breakpoint-lg:     1920px !default;
 
-// Button
-$button-left-right-padding: rem(0.600) !default;
-
-// Icon
-$icon-size: rem(2.400) !default;
-
 // App bar variables
-$app-bar-height: 64px !default;
-
+$app-bar-height: 60px !default;
 $toast-height: $baseline-grid * 3 !default;
 $toast-margin: $baseline-grid * 1 !default;
+
+
+// Inputs & Buttons
+// ------------------------------
+
+// Inputs
+$input-padding:				0 rem(1.60) !default;
+$input-border-radius:		4px !default;
+$input-border-width:		1px !default;
+$input-height:				rem(4.00) !default;
+$input-line-height:			rem(4.00) !default;
+$input-icon-padding:		rem(1.00) !default;
+$select-item-height:		rem(3.80) !default;
+$select-padding:			0 rem(1.0) 0 rem(1.6) !default;
+
+// Textarea
+$input-textarea-padding: 	rem(1.60) !default;
+$input-textarea-line-height:rem(2.56) !default;
+
+// Button
+$button-line-height:		rem(4.00) !default;
+$button-margin: 			rem(0.600) rem(0.800) !default;
+$button-min-width: 			rem(11.400) !default;
+$button-left-right-padding:	rem(0.600) !default;
+$button-padding: 			0 $button-left-right-padding !default;
+
+// Fab Buttons (shared between buttons.scss and fab*.scss)
+$button-fab-width:			rem(5.600) !default;
+$button-fab-height:			rem(5.600) !default;
+$button-fab-padding:		rem(1.60) !default;
+
+// Shared Checkbox variables
+$checkbox-width:			20px !default;
+$checkbox-height:			$checkbox-width !default;
+$checkbox-border-radius:	2px !default;
+$checkbox-border-width:		1px !default;
+$radio-border-width:		1px !default;
+
+// Icon
+$icon-size:					rem(2.400) !default;
+$icon-delete-scale:			0.65;
+
+
+// Menus
+//--------------------------------------------
+
+// navbar
+$md-nav-bar-height:			rem(4.80) !default;
+
+// tabs
+$tabs-header-height: 		rem(4.80) !default;
+
+// dropdowns
+$menu-border-radius:		4px !default;
+$max-visible-items:			6 !default;
+$menu-item-height:			rem(3.8) !default;
+$dense-menu-item-height:	rem(3.8) !default;
+
+// toolbar
+$md-toolbar-height:			rem(6.00) !default;
+$md-toolbar-medium-tall-height: rem(8.80) !default;
+$md-toolbar-tall-height:	rem(12.80) !default;
+
+// Mobile device heights
+$md-toolbar-height-mobile-portrait:	rem(5.60) !default;
+$md-toolbar-height-mobile-landscape:rem(4.80) !default;
+
+
+// Cards
+//--------------------------------------------
+$card-padding:				rem(1.60) !default;
+$card-border-radius:		4px !default;
+$card-border-width: 		1px !default;
+
+// White frames
+//--------------------------------------------
 
 // Whiteframes
 $shadow-key-umbra-opacity:      0.2 !default;
@@ -117,21 +186,4 @@ $material-enter: all $material-enter-duration $material-enter-timing-function;
 $material-leave-duration: 0.3s;
 $material-leave-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
 $material-leave: all $material-leave-duration $material-leave-timing-function;
-
-// Fab Buttons (shared between buttons.scss and fab*.scss)
-// -------------------------------------------
-$button-fab-width: rem(5.600) !default;
-$button-fab-height: rem(5.600) !default;
-$button-fab-padding: rem(1.60) !default;
-
-
-// Shared Checkbox variables
-$checkbox-width: 20px !default;
-$checkbox-height: $checkbox-width !default;
-$checkbox-border-radius: 2px !default;
-$checkbox-border-width: 1px !default;
-
-
-// Shared delete icons variables
-$delete-icon-scale: 0.65;
 

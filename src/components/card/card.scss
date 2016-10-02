@@ -1,13 +1,11 @@
-$card-padding: 16px !default;
-$card-box-shadow: $whiteframe-shadow-1dp !default;
-
 md-card {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   margin: $baseline-grid;
-
-  box-shadow: $card-box-shadow;
+  border-style: solid;
+  border-width: $card-border-width;
+  border-radius: $card-border-radius;
 
   md-card-header {
     padding: $card-padding;

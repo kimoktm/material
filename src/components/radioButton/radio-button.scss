@@ -77,7 +77,7 @@ md-radio-button {
     width: $radio-width;
     height: $radio-width;
     border-style: solid;
-    border-width: 2px;
+    border-width: $radio-border-width;
     border-radius: 50%;
     transition: border-color ease 0.28s;
   }

@@ -1,10 +1,12 @@
 md-chips.md-THEME_NAME-theme {
 
   .md-chips {
-    box-shadow: 0 1px '{{foreground-4}}';
+    // box-shadow: 0 1px '{{foreground-4}}';
+    border-color: '{{foreground-4}}';
 
     &.md-focused {
-      box-shadow: 0 2px '{{primary-color}}';
+      border-color: '{{primary-color}}';
+      // box-shadow: 0 2px '{{primary-color}}';
     }
 
     .md-chip-input-container {

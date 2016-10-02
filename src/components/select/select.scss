@@ -1,27 +1,26 @@
-$select-checkbox-border-radius: 2px !default;
-$select-checkbox-border-width: 2px !default;
-$select-checkbox-width: rem(1.4) !default;
-$select-option-height: 48px !default;
-$select-option-padding: 16px !default;
-$select-container-padding: 16px !default;
+// $select-option-padding: rem(1.6) !default;
 $select-container-transition-duration: 350ms !default;
-
 $select-max-visible-options: 5 !default;
 
 // Fixes the animations with the floating label when select is inside an input container
 md-input-container {
   &:not([md-no-float]) {
     .md-select-placeholder span:first-child {
-      transition: transform $swift-ease-out-duration $swift-ease-out-timing-function;
-      @include rtl(transform-origin, left top, right top);
+      // transition: transform $swift-ease-out-duration $swift-ease-out-timing-function;
+      // @include rtl(transform-origin, left top, right top);
     }
   }
   &.md-input-focused {
     &:not([md-no-float]) {
       .md-select-placeholder span:first-child {
-        transform: translateY(-22px) translateX(-2px) scale(0.75);
+        // transform: translateY(-22px) translateX(-2px) scale(0.75);
       }
     }
+  }
+
+  .md-placeholder {
+    opacity: 1;
+    top: auto;
   }
 }
 
@@ -34,7 +33,8 @@ md-input-container {
   display: none;
 
   // Fix 1px alignment issue to line up with text inputs (and spec)
-  transform: translateY(-1px);
+  // transform: translateY(2 * $input-height);
+  transform: translateX(-2 * $input-border-width - 1px) translateY($input-height);
 
   // Don't let the user select a new choice while it's animating
   &:not(.md-clickable) {
@@ -94,8 +94,8 @@ md-input-container:not(.md-input-has-value) {
 md-input-container.md-input-invalid {
   md-select {
     .md-select-value {
-      border-bottom-style: solid;
-      padding-bottom: 1px;
+      // border-bottom-style: solid;
+      // padding-bottom: 1px;
     }
   }
 }
@@ -103,6 +103,12 @@ md-input-container.md-input-invalid {
 md-select {
   display: flex;
   margin: 2.5*$baseline-grid 0 3*$baseline-grid + 2 0;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: $input-border-width;
+  border-radius: $input-border-radius;
+  padding: $select-padding;
+  height: $input-height;
 
   &[required], &.ng-required {
     &.ng-invalid:not(.md-no-asterisk) {
@@ -120,7 +126,7 @@ md-select {
     // to create a dotted line under the input.
     background-size: 4px 1px;
     background-repeat: repeat-x;
-    margin-bottom: -1px; // Shift downward so dotted line is positioned the same as other bottom borders
+    // margin-bottom: -1px; // Shift downward so dotted line is positioned the same as other bottom borders
   }
 
   &:focus {
@@ -135,19 +141,19 @@ md-select {
     }
     &.ng-invalid.ng-touched {
       .md-select-value {
-        border-bottom-style: solid;
-        padding-bottom: 1px;
+        // border-bottom-style: solid;
+        // padding-bottom: 1px;
       }
     }
     &:focus {
       .md-select-value {
-        border-bottom-width: 2px;
-        border-bottom-style: solid;
-        padding-bottom: 0;
+        // border-bottom-width: 2px;
+        // border-bottom-style: solid;
+        // padding-bottom: 0;
       }
       &.ng-invalid.ng-touched {
         .md-select-value {
-          padding-bottom: 0;
+          // padding-bottom: 0;
         }
       }
     }
@@ -157,7 +163,7 @@ md-select {
 // Fix value by 1px to align with standard text inputs (and spec)
 md-input-container.md-input-has-value .md-select-value {
   > span:not(.md-select-icon) {
-    transform: translate3d(0, 1px, 0);
+    // transform: translate3d(0, 1px, 0);
   }
 }
 
@@ -165,8 +171,8 @@ md-input-container.md-input-has-value .md-select-value {
   display: flex;
   align-items: center;
   padding: 2px 2px 1px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  // border-bottom-width: 1px;
+  // border-bottom-style: solid;
   background-color: rgba(0,0,0,0);
   position: relative;
   box-sizing: content-box;
@@ -226,14 +232,20 @@ md-select-menu {
 
   &:not(.md-overflow) {
     md-content {
-      padding-top: $baseline-grid;
-      padding-bottom: $baseline-grid;
+      // padding-top: $baseline-grid;
+      // padding-bottom: $baseline-grid;
     }
   }
 
-  box-shadow: $whiteframe-shadow-1dp;
-  max-height: ($select-option-height * $select-max-visible-options) + 2 * $baseline-grid;
-  min-height: $select-option-height;
+  border-style: solid;
+  border-radius: $input-border-radius;
+  border-width: $input-border-width;
+  // border: 1px solid '{{foreground-4}}';
+  // overflow: hidden;
+  // box-shadow: $whiteframe-shadow-1dp;
+  // max-height: ($select-item-height * $select-max-visible-options) + 2 * $baseline-grid;
+  max-height: ($select-item-height * $select-max-visible-options);
+  min-height: $select-item-height;
   overflow-y: hidden;
 
   @include rtl(transform-origin, left top, right top);
@@ -242,8 +254,9 @@ md-select-menu {
 
   md-content {
     min-width: 136px;
-    min-height: $select-option-height;
-    max-height: ($select-option-height * $select-max-visible-options) + 2 * $baseline-grid;
+    min-height: $select-item-height;
+    max-height: ($select-item-height * $select-max-visible-options);
+    // max-height: ($select-item-height * $select-max-visible-options) + 2 * $baseline-grid;
     overflow-y: auto;
   }
   > * {
@@ -274,22 +287,24 @@ md-option {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  padding: 0 $select-option-padding 0 $select-option-padding;
-  height: $select-option-height;
+  // padding: 0 $select-option-padding 0 $select-option-padding;
+  padding: $input-padding;
+  height: $select-item-height;
 }
 
 md-optgroup {
   display: block;
   label {
     display: block;
-    font-size: rem(1.4);
-    text-transform: uppercase;
+    // font-size: rem(1.4);
+    // text-transform: uppercase;
     padding: $baseline-grid * 2;
-    font-weight: 600;
+    font-weight: 500;
   }
+
   md-option {
-    padding-left: $select-option-padding * 2;
-    padding-right: $select-option-padding * 2;
+    // padding-left: $select-option-padding * 2;
+    // padding-right: $select-option-padding * 2;
   }
 }
 
@@ -304,14 +319,14 @@ md-optgroup {
 
 md-select-menu[multiple] {
   md-option.md-checkbox-enabled {
-    @include rtl(padding-left, $select-option-padding * 2.5, $select-option-padding);
-    @include rtl(padding-right, $select-option-padding, $select-option-padding * 2.5);
+    // @include rtl(padding-left, $select-option-padding * 2.5, $select-option-padding);
+    // @include rtl(padding-right, $select-option-padding, $select-option-padding * 2.5);
 
     @include checkbox-container('[selected]');
 
-    .md-container {
-      @include rtl(margin-left, $select-option-padding * (2 / 3), auto);
-      @include rtl(margin-right, auto, $select-option-padding * (2 / 3));
-    }
+    // .md-container {
+    //   @include rtl(margin-left, $select-option-padding * (2 / 3), auto);
+    //   @include rtl(margin-right, auto, $select-option-padding * (2 / 3));
+    // }
   }
 }

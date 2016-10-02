@@ -32,7 +32,7 @@ md-menu-bar {
     margin: 0;
     border: 0;
     background-color: transparent;
-    height: 5 * $baseline-grid;
+    // height: 5 * $baseline-grid;
   }
 
   md-backdrop.md-menu-backdrop {
@@ -42,7 +42,7 @@ md-menu-bar {
 
 md-menu-content.md-menu-bar-menu.md-dense {
   max-height: none;
-  padding: 2 * $baseline-grid 0;
+  // padding: 2 * $baseline-grid 0;
   md-menu-item.md-indent {
     position: relative;
     > md-icon {
@@ -58,7 +58,8 @@ md-menu-content.md-menu-bar-menu.md-dense {
   }
   .md-button {
     min-height: 0;
-    height: 4 * $baseline-grid;
+    height: $menu-item-height;
+    // height: 4 * $baseline-grid;
     display: flex;
     span {
       flex-grow: 1;

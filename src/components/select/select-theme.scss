@@ -1,55 +1,83 @@
 md-input-container {
 
   // The asterisk of the select should always use the warn color.
-  md-select.md-THEME_NAME-theme .md-select-value {
-    span:first-child:after {
-      color: '{{warn-A700}}'
+  md-select.md-THEME_NAME-theme {
+    // border-color: '{{foreground-4}}';
+
+    .md-select-value {
+      span:first-child:after {
+        color: '{{warn-A700}}'
+      }
     }
+  }
+
+  label.md-placeholder {
+    color: '{{foreground-2}}';
   }
 
   // When the select is blurred and not invalid then the asterisk should use the foreground color.
   &:not(.md-input-focused):not(.md-input-invalid) {
-    md-select.md-THEME_NAME-theme .md-select-value {
-      span:first-child:after {
-        color: '{{foreground-3}}';
+    md-select.md-THEME_NAME-theme {
+      // border-color: '{{primary-color}}';
+      .md-select-value {
+        span:first-child:after {
+          color: '{{foreground-3}}';
+        }
       }
     }
   }
 
   &.md-input-focused:not(.md-input-has-value) {
-    md-select.md-THEME_NAME-theme .md-select-value {
-      color: '{{primary-color}}';
-
-      &.md-select-placeholder {
+    md-select.md-THEME_NAME-theme {
+      border-color: '{{primary-color}}';
+      .md-select-value {
         color: '{{primary-color}}';
+
+        &.md-select-placeholder {
+          color: '{{primary-color}}';
+        }
       }
     }
   }
 
   &.md-input-invalid {
-    md-select.md-THEME_NAME-theme .md-select-value {
-      color: '{{warn-A700}}' !important;
-      border-bottom-color: '{{warn-A700}}' !important;
+
+    md-select.md-THEME_NAME-theme {
+      border-color: '{{warn-A700}}';
+
+      .md-select-value {
+        color: '{{warn-A700}}' !important;
+        // border-bottom-color: '{{warn-A700}}' !important;
+      }
     }
 
     md-select.md-THEME_NAME-theme.md-no-underline .md-select-value {
-      border-bottom-color: transparent !important;
+      // border-bottom-color: transparent !important;
     }
   }
 
 }
 
 md-select.md-THEME_NAME-theme {
-  &[disabled] .md-select-value {
-    border-bottom-color: transparent;
-    background-image: linear-gradient(to right, '{{foreground-3}}' 0%, '{{foreground-3}}' 33%, transparent 0%);
-    background-image: -ms-linear-gradient(left, transparent 0%, '{{foreground-3}}' 100%);
-  }
-  .md-select-value {
-    border-bottom-color: '{{foreground-4}}';
+  border-color: '{{foreground-4}}';
 
+  &[disabled] {
+    border-color: '{{foreground-3}}';
+    .md-select-value {
+      // border-bottom-color: transparent;
+      // background-image: linear-gradient(to right, '{{foreground-3}}' 0%, '{{foreground-3}}' 33%, transparent 0%);
+      // background-image: -ms-linear-gradient(left, transparent 0%, '{{foreground-3}}' 100%);
+    }
+  }
+
+  .md-select-value {
     &.md-select-placeholder {
+      // color: '{{foreground-4}}';
       color: '{{foreground-3}}';
+    }
+
+    .md-select-icon {
+      color: '{{foreground-4}}';
     }
 
     span:first-child:after {
@@ -57,33 +85,57 @@ md-select.md-THEME_NAME-theme {
     }
   }
   &.md-no-underline .md-select-value {
-    border-bottom-color: transparent !important;
+    // border-bottom-color: transparent !important;
   }
   &.ng-invalid.ng-touched {
+    border-color: '{{warn-A700}}';
+
     .md-select-value {
       color: '{{warn-A700}}' !important;
-      border-bottom-color: '{{warn-A700}}' !important;
+      // border-bottom-color: '{{warn-A700}}' !important;
+
+      .md-select-icon {
+        color: '{{warn-A700}}';
+      }
     }
     &.md-no-underline .md-select-value {
-      border-bottom-color: transparent !important;
+      // border-bottom-color: transparent !important;
     }
   }
   &:not([disabled]):focus {
+    border-color: '{{primary-color}}';
+
     .md-select-value {
-      border-bottom-color: '{{primary-color}}';
+      // border-bottom-color: '{{primary-color}}';
       color: '{{ foreground-1 }}';
       &.md-select-placeholder {
         color: '{{ foreground-1 }}';
       }
+      .md-select-icon {
+        color: '{{primary-color}}';
+      }
     }
     &.md-no-underline .md-select-value {
-      border-bottom-color: transparent !important;
+      // border-bottom-color: transparent !important;
     }
-    &.md-accent .md-select-value {
-      border-bottom-color: '{{accent-color}}';
+    &.md-accent {
+      border-color: '{{accent-color}}';
+      .md-select-value {
+        // border-bottom-color: '{{accent-color}}';
+        .md-select-icon {
+          color: '{{accent-color}}';
+        }
+      }
     }
-    &.md-warn .md-select-value {
-      border-bottom-color: '{{warn-color}}';
+
+    &.md-warn {
+      border-color: '{{warn-color}}';
+      .md-select-value {
+        // border-bottom-color: '{{warn-color}}';
+        .md-select-icon {
+          color: '{{warn-color}}';
+        }
+      }
     }
   }
   &[disabled] {
@@ -91,12 +143,17 @@ md-select.md-THEME_NAME-theme {
       color: '{{foreground-3}}';
       &.md-select-placeholder {
         color: '{{foreground-3}}';
+        .md-select-icon {
+          color: '{{foreground-3}}';
+        }
       }
     }
   }
 }
 
 md-select-menu.md-THEME_NAME-theme {
+  border-color: '{{foreground-4}}';
+
   md-content {
     background: '{{background-A100}}';
 
@@ -137,7 +194,7 @@ md-select-menu.md-THEME_NAME-theme {
 }
 
 .md-checkbox-enabled.md-THEME_NAME-theme {
-  @include checkbox-primary('[selected]');
+  // @include checkbox-primary('[selected]');
 
   md-option .md-text {
     color: '{{background-900-0.87}}';

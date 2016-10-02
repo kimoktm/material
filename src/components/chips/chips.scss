@@ -1,11 +1,10 @@
-$chip-font-size: $body-font-size-base !default;
 $chip-height: rem(2.8) !default;
 $chip-padding: 0 rem(1.2) 0 rem(1.2) !default;
 $chip-input-padding: 0 !default;
 $chip-remove-padding-right: rem(2.2) !default;
 $chip-remove-line-height: rem(2.2) !default;
-$chip-margin: rem(0.8) rem(0.8) 0 0 !default;
-$chip-wrap-padding: 0 0 rem(0.8) rem(0.3) !default;
+$chip-margin: rem(0.5) rem(0.5) 0 0 !default;
+$chip-wrap-padding: 0 0 rem(0.5) rem(1.60) !default;
 $chip-delete-icon-size: rem(1.8) !default;
 $contact-chip-padding: 0 rem(2.5) 0 0 !default;
 $contact-chip-suggestion-image-height: rem(4.0) !default;
@@ -56,9 +55,12 @@ $contact-chip-name-width: rem(12) !default;
 
   display: block;
   font-family: $font-family;
-  font-size: $chip-font-size;
+  // font-size: $chip-font-size;
   @include rtl(padding, $chip-wrap-padding, rtl-value($chip-wrap-padding));
   vertical-align: middle;
+  border-style: solid;
+  border-width: $input-border-width;
+  border-radius: $input-border-radius;
 
   &.md-readonly .md-chip-input-container {
     min-height: $chip-height;
@@ -132,7 +134,7 @@ $contact-chip-name-width: rem(12) !default;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate3d(-50%, -50%, 0) scale($delete-icon-scale);
+        transform: translate3d(-50%, -50%, 0) scale($icon-delete-scale);
       }
     }
   }
@@ -155,6 +157,7 @@ $contact-chip-name-width: rem(12) !default;
     }
     md-autocomplete, md-autocomplete-wrap {
       background: transparent;
+      border: 0;
       height: $chip-height;
     }
     md-autocomplete {

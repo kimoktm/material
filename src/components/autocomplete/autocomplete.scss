@@ -1,15 +1,10 @@
-// The default item height is also specified in the JavaScript.
-$md-autocomplete-border-radius: 4px !default;
-$md-autocomplete-item-height: rem(3.80) !default;
-$md-autocomplete-input-height: rem(4.00) !default;
-
 @keyframes md-autocomplete-list-out {
   0% {
     animation-timing-function: linear;
   }
   50% {
     opacity: 0;
-    height: $md-autocomplete-input-height;
+    height: $input-height;
     animation-timing-function: ease-in;
   }
   100% {
@@ -26,18 +21,17 @@ $md-autocomplete-input-height: rem(4.00) !default;
   }
   50% {
     opacity: 0;
-    height: $md-autocomplete-input-height;
+    height: $input-height;
   }
   100% {
     opacity: 1;
-    height: $md-autocomplete-input-height;
+    height: $input-height;
   }
 }
 
 md-autocomplete {
-  border-radius: $md-autocomplete-border-radius;
+  box-sizing: border-box;
   display: block;
-  height: $md-autocomplete-input-height;
   position: relative;
   overflow: visible;
   min-width: 190px;
@@ -47,7 +41,6 @@ md-autocomplete {
     }
   }
   &[md-floating-label] {
-    border-radius: 0;
     background: transparent;
     height: auto;
 
@@ -55,6 +48,8 @@ md-autocomplete {
       padding-bottom: 0px;
     }
     md-autocomplete-wrap {
+      border: 0;
+      border-radius: 0;
       height: auto;
     }
     button {
@@ -67,15 +62,18 @@ md-autocomplete {
     }
   }
   md-autocomplete-wrap {
-
+    border-style: solid;
+    border-width: $input-border-width;
+    border-radius: $input-border-radius;
     // Layout [layout='row']
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
+    box-shadow: none!important;
 
     position: relative;
     overflow: visible;
-    height: $md-autocomplete-input-height;
+    height: $input-height;
     &.md-menu-showing {
       z-index: $z-index-backdrop + 1;
     }
@@ -93,7 +91,7 @@ md-autocomplete {
       left: 0;
       // When `md-inline` is present, we adjust the offset to go over the `ng-message` space
       &.md-inline {
-        bottom: $md-autocomplete-input-height;
+        bottom: $input-height;
         right: 2px;
         left: 2px;
         width: auto;
@@ -128,9 +126,9 @@ md-autocomplete {
   input:not(.md-input) {
     @include md-flat-input();
     width: 100%;
-    padding: 0 15px;
-    line-height: $md-autocomplete-input-height;
-    height: $md-autocomplete-input-height;
+    padding: $input-padding;
+    line-height: $input-height;
+    height: $input-height;
   }
   button {
     position: relative;
@@ -169,7 +167,7 @@ md-autocomplete {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate3d(-50%, -50%, 0) scale($delete-icon-scale);
+      transform: translate3d(-50%, -50%, 0) scale($icon-delete-scale);
       path {
         stroke-width: 0;
       }
@@ -203,12 +201,17 @@ md-autocomplete {
 
 .md-virtual-repeat-container.md-autocomplete-suggestions-container {
   position: absolute;
-  box-shadow: 0 2px 5px rgba(black, 0.25);
+  // margin-top: -2 *  $input-border-width;
+  margin-top: rem(0.20);
+  border-style: solid;
+  border-radius: $input-border-radius;
+  border-width: $input-border-width;
+  box-shadow: none;
   z-index: $z-index-tooltip;
 }
 
 .md-virtual-repeat-container.md-not-found {
-  height: $md-autocomplete-item-height;
+  height: $select-item-height;
 }
 
 .md-autocomplete-suggestions {
@@ -219,9 +222,9 @@ md-autocomplete {
   li {
     font-size: $body-font-size-base;
     overflow: hidden;
-    padding: 0 15px;
-    line-height: $md-autocomplete-item-height;
-    height: $md-autocomplete-item-height;
+    padding: $input-padding;
+    line-height: $select-item-height;
+    height: $select-item-height;
     transition: background 0.15s linear;
     margin: 0;
     white-space: nowrap;

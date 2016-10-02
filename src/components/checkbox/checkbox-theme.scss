@@ -7,9 +7,9 @@ md-checkbox.md-THEME_NAME-theme {
     color: '{{background-600}}';
   }
 
-  &.md-checked.md-focused .md-container:before {
-    background-color: '{{accent-color-0.26}}';
-  }
+  // &.md-checked.md-focused .md-container:before {
+    // background-color: '{{accent-color-0.26}}';
+  // }
 
   .md-ink-ripple {
     color: '{{foreground-2}}';
@@ -20,11 +20,13 @@ md-checkbox.md-THEME_NAME-theme {
   }
 
   &:not(.md-checked) .md-icon {
-    border-color: '{{foreground-2}}';
+    // border-color: '{{foreground-2}}';
+    border-color: '{{foreground-4}}';
   }
 
   &.md-checked .md-icon {
-    border-color: '{{foreground-2}}';
+    // border-color: '{{foreground-2}}';
+    border-color: '{{foreground-4}}';
     // background-color: '{{accent-color-0.87}}';
   }
 
@@ -34,7 +36,7 @@ md-checkbox.md-THEME_NAME-theme {
 
   &:not([disabled]) {
     &.md-primary {
-     @include checkbox-primary;
+     // @include checkbox-primary;
     }
 
     &.md-warn {
@@ -50,21 +52,22 @@ md-checkbox.md-THEME_NAME-theme {
         color: '{{warn-color-0.87}}';
       }
 
-      &:not(.md-checked) .md-icon {
-        border-color: '{{foreground-2}}';
-      }
+      // &:not(.md-checked) .md-icon {
+      //   border-color: '{{foreground-2}}';
+      // }
 
-      &.md-checked .md-icon {
-        border-color: '{{foreground-2}}';
-        // background-color: '{{warn-color-0.87}}';
-      }
+      // &.md-checked .md-icon {
+      //   border-color: '{{foreground-2}}';
+      //   // background-color: '{{warn-color-0.87}}';
+      //   // color: '{{warn-color-0.87}}';
+      // }
 
-      &.md-checked.md-focused:not([disabled]) .md-container:before {
-        background-color: '{{warn-color-0.87}}';
-      }
+      // &.md-checked.md-focused:not([disabled]) .md-container:before {
+      //   // background-color: '{{warn-color-0.87}}';
+      // }
 
       &.md-checked .md-icon:after {
-        border-color: '{{background-200}}';
+        border-color: '{{warn-color-0.87}}';
       }
     }
   }
@@ -77,11 +80,11 @@ md-checkbox.md-THEME_NAME-theme {
 
     &.md-checked .md-icon {
       border-color: '{{foreground-3}}';
-      // background-color: '{{foreground-3}}';
     }
 
     &.md-checked .md-icon:after {
-      border-color: '{{background-200}}';
+      // border-color: '{{background-200}}';
+      border-color: '{{foreground-3}}';
     }
 
     .md-icon:after {

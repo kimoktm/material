@@ -1,15 +1,6 @@
 // Standard/Desktop Heights
-$md-toolbar-height: $baseline-grid * 8 !default;
-$md-toolbar-medium-tall-height: 88px !default;
-$md-toolbar-tall-height: 128px !default;
-
-// Mobile device heights
-$md-toolbar-height-mobile-portrait: 56px !default;
-$md-toolbar-height-mobile-landscape: 48px !default;
-
-$md-toolbar-indent-margin: 64px !default;
-$md-toolbar-padding: 16px !default;
-
+$md-toolbar-padding: rem(1.60) !default;
+$md-toolbar-indent-margin: rem(6.00) !default;
 $icon-button-margin-offset: rem(-0.800) !default;
 
 md-toolbar {
@@ -27,7 +18,7 @@ md-toolbar {
   &._md-toolbar-transitions {
     transition-duration: $swift-ease-in-out-duration;
     transition-timing-function: $swift-ease-in-out-timing-function;
-    transition-property: background-color, fill, color;
+    transition-property: background-color, fill, color, opacity;
   }
 
   &.md-whiteframe-z1-add, &.md-whiteframe-z1-remove {
@@ -118,11 +109,18 @@ md-toolbar {
   .md-button {
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 400;
+    // transition: opacity 0.5s ease;
+
+    .md-ripple-container {
+      display: none;
+    }
 
     &, &.md-icon-button md-icon {
       transition-duration: $swift-ease-in-out-duration;
       transition-timing-function: $swift-ease-in-out-timing-function;
-      transition-property: background-color, fill, color;
+      transition-property: background-color, fill, color, opacity;
+      // transition-property: opacity;
 
       // Normally .md-button is already resetting the transition, when $ngAnimate looks for the duration,
       // but in this case, the selector has a higher specificity than the `reset selector`, which means, that
@@ -130,6 +128,10 @@ md-toolbar {
       &.ng-animate {
         transition: none;
       }
+    }
+
+    &:hover, &:active {
+      opacity: 0.75;
     }
   }
   &> .md-button:first-child {
