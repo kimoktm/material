@@ -1,6 +1,7 @@
 // $select-option-padding: rem(1.6) !default;
 $select-container-transition-duration: 350ms !default;
 $select-max-visible-options: 5 !default;
+$select-option-padding: 16px !default;
 
 // Fixes the animations with the floating label when select is inside an input container
 md-input-container {
@@ -303,8 +304,8 @@ md-optgroup {
   }
 
   md-option {
-    // padding-left: $select-option-padding * 2;
-    // padding-right: $select-option-padding * 2;
+    padding-left: $select-option-padding * 2;
+    padding-right: $select-option-padding * 2;
   }
 }
 
@@ -319,14 +320,14 @@ md-optgroup {
 
 md-select-menu[multiple] {
   md-option.md-checkbox-enabled {
-    // @include rtl(padding-left, $select-option-padding * 2.5, $select-option-padding);
-    // @include rtl(padding-right, $select-option-padding, $select-option-padding * 2.5);
+    @include rtl(padding-left, $select-option-padding * 2.5, $select-option-padding);
+    @include rtl(padding-right, $select-option-padding, $select-option-padding * 2.5);
 
     @include checkbox-container('[selected]');
 
-    // .md-container {
-    //   @include rtl(margin-left, $select-option-padding * (2 / 3), auto);
-    //   @include rtl(margin-right, auto, $select-option-padding * (2 / 3));
-    // }
+    .md-container {
+      @include rtl(margin-left, $select-option-padding * (2 / 3), auto);
+      @include rtl(margin-right, auto, $select-option-padding * (2 / 3));
+    }
   }
 }

@@ -362,6 +362,6 @@ function MdProgressCircularDirective($window, $mdProgressCircular, $mdTheming,
    * the provided diameter.
    */
   function getStroke(diameter) {
-    return $mdProgressCircular.strokeWidth / 100 * diameter;
+    return $mdProgressCircular.strokeWidth / 200 * diameter;
   }
 }

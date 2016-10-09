@@ -59,6 +59,10 @@ button.md-button::-moz-focus-inner {
 
   transition: background-color $swift-ease-out-duration $swift-ease-out-timing-function;
 
+  &.md-lrg {
+    min-width: $button-lrg-min-width;
+  }
+
   &:focus {
     outline: none;
   }

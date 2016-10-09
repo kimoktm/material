@@ -27,9 +27,32 @@
 
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <md-button aria-label="Go Back">
+<!--         <md-button aria-label="Go Back">
           Go Back
         </md-button>
+ -->
+        <md-button ui-sref="list" class="md-lined">list a ride</md-button>
+
+        <md-menu md-position-mode="target bottom">
+          <md-button md-no-ink ng-click="$mdOpenMenu($event)">Learn</md-button>
+          <md-menu-content width="2">
+            <md-menu-item>
+              <md-button md-no-ink ng-click="">How</md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button md-no-ink ng-click="">Yeah</md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button md-no-ink ng-click="">Nein</md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+              <md-button disabled="disabled" ng-click="header.checkVoicemail()">Oppa</md-button>
+            </md-menu-item>
+
+          </md-menu-content>
+        </md-menu>
+
         <h2>
           <span>Toolbar with Standard Buttons</span>
         </h2>

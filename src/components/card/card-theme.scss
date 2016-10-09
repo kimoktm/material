@@ -19,7 +19,7 @@ md-card.md-THEME_NAME-theme {
 
     md-card-header-text {
       .md-subhead {
-        color: '{{foreground-2}}'
+        // color: '{{foreground-2}}'
       }
     }
   }
@@ -28,7 +28,7 @@ md-card.md-THEME_NAME-theme {
     md-card-title-text {
       &:not(:only-child) {
         .md-subhead {
-          color: '{{foreground-2}}';
+          // color: '{{foreground-2}}';
         }
       }
     }

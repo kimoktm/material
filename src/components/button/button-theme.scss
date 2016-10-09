@@ -146,7 +146,7 @@
   &.md-warn[disabled] {
     color: '{{foreground-3}}';
     border-color: '{{foreground-3}}';
-    cursor: default;
+    cursor: not-allowed;
 
     md-icon {
       color: '{{foreground-3}}';

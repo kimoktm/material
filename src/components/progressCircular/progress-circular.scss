@@ -23,5 +23,9 @@ md-progress-circular {
         overflow: visible;
         top: 0;
         left: 0;
+
+        path {
+            // stroke-width: 2px!important;
+        }
     }
 }

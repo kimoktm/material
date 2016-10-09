@@ -1,5 +1,5 @@
 md-divider.md-THEME_NAME-theme {
-  border-top-color: '{{foreground-4}}';
+  border-top-color: '{{foreground-3}}';
 }
 
 .layout-row,
@@ -9,6 +9,6 @@ md-divider.md-THEME_NAME-theme {
 .layout-lg-row, .layout-gt-lg-row,
 .layout-xl-row {
   & > md-divider.md-THEME_NAME-theme {
-    border-right-color: '{{foreground-4}}';
+    border-right-color: '{{foreground-3}}';
   }
 }

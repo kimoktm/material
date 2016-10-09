@@ -84,9 +84,9 @@ md-menu-item {
    * <a> elements. Add some top padding to fix alignment since buttons automatically align their
    * text vertically.
    */
-  > a.md-button {
-    padding-top: 5px;
-  }
+  // > a.md-button {
+  //   padding-top: 5px;
+  // }
 
   > .md-button {
     // Firefox-specific reset styling to fix alignment issues (see #8464)
@@ -100,8 +100,8 @@ md-menu-item {
     display: inline-block;
     border-radius: 0;
     margin: auto 0;
-    font-size: (2*$baseline-grid) - 1;
-    text-transform: none;
+    // font-size: (2*$baseline-grid) - 1;
+    // text-transform: none;
     font-weight: 400;
     height: 100%;
     padding-left: 2*$baseline-grid;
@@ -154,3 +154,30 @@ md-toolbar {
   }
 }
 
+// right dropdown arrow
+.md-right-arrow
+{
+  position: relative;
+  padding-right: 20px!important;
+
+  &:after {
+    display: inline-block;
+    content: '\25BC';
+    position: absolute;
+    speak: none;
+    right: 0;
+    padding-right: 0;
+    font-size: 13px;
+    transform: scaleY(0.5) scaleX(1);    
+  }
+
+  &.md-lined, &.md-raised {
+    padding-right: rem(3.20)!important;
+  }
+
+  &.md-lined:after,
+  &.md-raised:after {
+    padding-right: rem(1.60)!important;
+  }
+
+}

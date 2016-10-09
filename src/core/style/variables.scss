@@ -57,6 +57,7 @@ $input-textarea-line-height:rem(2.56) !default;
 $button-line-height:		rem(4.00) !default;
 $button-margin: 			rem(0.600) rem(0.800) !default;
 $button-min-width: 			rem(11.400) !default;
+$button-lrg-min-width:		rem(20.00) !default;
 $button-left-right-padding:	rem(0.600) !default;
 $button-padding: 			0 $button-left-right-padding !default;
 
@@ -96,6 +97,7 @@ $dense-menu-item-height:	rem(3.8) !default;
 $md-toolbar-height:			rem(6.00) !default;
 $md-toolbar-medium-tall-height: rem(8.80) !default;
 $md-toolbar-tall-height:	rem(12.80) !default;
+$md-toolbar-button-padding: rem(0.60) rem(1.20) !default;
 
 // Mobile device heights
 $md-toolbar-height-mobile-portrait:	rem(5.60) !default;
@@ -112,9 +114,9 @@ $card-border-width: 		1px !default;
 //--------------------------------------------
 
 // Whiteframes
-$shadow-key-umbra-opacity:      0.2 !default;
-$shadow-key-penumbra-opacity:   0.14 !default;
-$shadow-ambient-shadow-opacity: 0.12 !default;
+$shadow-key-umbra-opacity:      0.09 !default;
+$shadow-key-penumbra-opacity:   0.06 !default;
+$shadow-ambient-shadow-opacity: 0.05 !default;
 
 // NOTE(shyndman): gulp-sass seems to be failing if I split the shadow defs across
 //    multiple lines. Ugly. Sorry.

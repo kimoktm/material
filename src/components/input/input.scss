@@ -1,20 +1,22 @@
 $input-error-font-size: rem(1.20) !default;
-$input-error-height: rem(2.4) !default;
-$input-error-line-height: $input-error-font-size + rem(0.2) !default;
-$error-padding-top: ($input-error-height - $input-error-line-height) / 2 !default;
+$input-error-height: rem(2.40) !default;
+$input-error-line-height: $input-error-font-size !default;
+// $error-padding-top: ($input-error-height - $input-error-line-height) / 2 !default;
+$error-padding-top: rem(0.4) !default;
 
 $input-resize-handle-height: 10px !default;
 
 // $input-icon-padding: 0 rem(0.);
 
 $icon-offset: rem(3.60) !default;
-$icon-top-offset: ($icon-offset - rem(0.2) - $input-border-width) / 4 !default;
+$icon-top-offset: ($icon-offset - rem(0.20) - $input-border-width) / 4 !default;
 
 md-input-container {
   @include pie-clearfix();
   display: inline-block;
   position: relative;
-  margin: 18px 0;
+  // padding: rem(0.20);
+  margin: 0;
   vertical-align: middle;
 
   &.md-block {
@@ -88,8 +90,10 @@ md-input-container {
   }
 
   label:not(.md-container-ignore) {
-    position: absolute;
+    // position: absolute;
     bottom: 100%;
+    line-height: 1.8;
+
     @include rtl(left, 0, auto);
     @include rtl(right, auto, 0);
 
@@ -226,8 +230,10 @@ md-input-container {
     font-size: $input-error-font-size;
     line-height: $input-error-line-height;
     overflow: hidden;
-
     transition: $swift-ease-in;
+
+    @include rtl(padding-left, 1px, 0);
+    @include rtl(padding-right, 0, 1px);
 
     // Default state for messages is to be visible
     opacity: 1;

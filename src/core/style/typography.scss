@@ -16,6 +16,8 @@ html, body {
 
   -webkit-font-smoothing: antialiased; // [4]
   -moz-osx-font-smoothing: grayscale; // [4]
+
+  font-size: $body-font-size-base;
 }
 
 md-select, md-card, md-list, md-toolbar,
@@ -45,7 +47,7 @@ ul, ol, p, h1, h2, h3, h4, h5, h6 {
 }
 .md-display-1 {
   font-size: $display-1-font-size-base;
-  font-weight: 700;
+  font-weight: 500;
   line-height: rem(4);
 }
 .md-headline {
@@ -93,4 +95,24 @@ button,
 textarea,
 input {
   font-size: 100%;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  color: '{{foreground-3}}';
+}
+
+:-moz-placeholder {
+  font-style: italic;
+  color: '{{foreground-3}}';
+}
+
+::-moz-placeholder {
+  font-style: italic;
+  color: '{{foreground-3}}';
+}
+
+:-ms-input-placeholder {  
+  font-style: italic;
+  color: '{{foreground-3}}';
 }

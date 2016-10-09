@@ -69,6 +69,10 @@ md-sidenav {
     transform: translate3d(0%, 0, 0);
   }
 
+  .md-button {
+    font-weight: 400;
+  }
+
   @extend .md-sidenav-left;
 }
 .md-sidenav-backdrop.md-locked-open {

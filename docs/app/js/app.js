@@ -50,9 +50,9 @@ function(SERVICES, COMPONENTS, DEMOS, PAGES,
         // '700': '#13eb82',
         // '800': '#2aee8f',
         // '900': '#41f09b',
-    // 'contrastDefaultColor': 'light',
-    // 'contrastDarkColors': '50 100 200 A100',
-    // 'contrastStrongLightColors': '300 400 A200 A400'
+    'contrastDefaultColor': 'light',
+    'contrastDarkColors': '50 100 200 A100',
+    'contrastStrongLightColors': '300 400 A200 A400'
   }));
   $mdThemingProvider.definePalette('docs-red', $mdThemingProvider.extendPalette('blue', {
     // 'A100': '#DE3641'
@@ -69,10 +69,20 @@ function(SERVICES, COMPONENTS, DEMOS, PAGES,
   }));
 
 
+  var DARK_FOREGROUND = {
+    name: 'dark',
+    '1': 'rgba(85,85,85,1.0)',
+    '2': 'rgba(68,68,68,1.0)',
+    '3': 'rgba(229,234,234,1.0)',
+    '4': 'rgba(206,212,216,1.0)'
+  };
+
   $mdThemingProvider.theme('default')
       .primaryPalette('docs-blue')
       .accentPalette('docs-red')
-      .backgroundPalette('background');
+      .backgroundPalette('background')
+      .foregroundPalette = DARK_FOREGROUND;
+
   $mdThemingProvider
       .enableBrowserColor();
 

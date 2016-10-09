@@ -15,10 +15,13 @@ md-menu-content.md-THEME_NAME-theme {
         color: '{{background-A200-0.25}}';
       }
     }
-
   }
 
   md-menu-divider {
     background-color: '{{background-A200-0.11}}';
+  }
+
+  .md-right-arrow:after {
+    color: '{{foreground-4}}';
   }
 }
