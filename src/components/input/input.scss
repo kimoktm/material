@@ -9,14 +9,14 @@ $input-resize-handle-height: 10px !default;
 // $input-icon-padding: 0 rem(0.);
 
 $icon-offset: rem(3.60) !default;
-$icon-top-offset: ($icon-offset - rem(0.20) - $input-border-width) / 4 !default;
+$icon-top-offset: ($icon-offset - rem(0.20) - $input-border-width) !default;
 
 md-input-container {
   @include pie-clearfix();
   display: inline-block;
   position: relative;
   // padding: rem(0.20);
-  margin: 0;
+  margin-bottom: rem(1.6);
   vertical-align: middle;
 
   &.md-block {
@@ -28,14 +28,20 @@ md-input-container {
   .md-errors-spacer {
     @include rtl(float, right, left);
     min-height: $input-error-height;
-
+    position: absolute;
+    right: 0;
+    bottom: -1 * $input-error-height;
     // Ensure the element always takes up space, even if empty
     min-width: 1px;
   }
 
+  .hint {
+    margin-bottom: -1 * $input-error-height ;
+  }
+
   > md-icon {
     position: absolute;
-    top: $icon-top-offset;
+    top: $icon-top-offset / 4;
     padding: 0 $input-icon-padding;
     @include rtl(left, 2px, auto);
     @include rtl(right, auto, 2px);
@@ -86,16 +92,18 @@ md-input-container {
   }
 
   label {
+    position: relative;
     font-weight: 500;
   }
 
   label:not(.md-container-ignore) {
     // position: absolute;
-    bottom: 100%;
+    position: relative;
+    // bottom: 100%;
     line-height: 1.8;
 
-    @include rtl(left, 0, auto);
-    @include rtl(right, auto, 0);
+    // @include rtl(left, 0, auto);
+    // @include rtl(right, auto, 0);
 
     &.md-required:after {
       content: ' *';
@@ -214,7 +222,8 @@ md-input-container {
   .md-input-messages-animation {
     position: relative;
     order: 4;
-    overflow: hidden;
+    overflow: visible;
+    height: 0;
     @include rtl(clear, left, right);
 
     &.ng-enter {
@@ -229,7 +238,8 @@ md-input-container {
   .md-input-message-animation, .md-char-counter {
     font-size: $input-error-font-size;
     line-height: $input-error-line-height;
-    overflow: hidden;
+    overflow: visible;
+    height: 0;
     transition: $swift-ease-in;
 
     @include rtl(padding-left, 1px, 0);
@@ -319,7 +329,7 @@ md-input-container {
 
     > label {
       pointer-events: none;
-      position: absolute;
+      // position: absolute;
     }
 
     > md-icon {

@@ -22,6 +22,8 @@
   // won't be set on the most browsers.
   @each $pseudo in $pseudos {
     &#{$pseudo} {
+      font-style: italic;
+      opacity: 0.65;
       color: unquote($color);
     }
   }

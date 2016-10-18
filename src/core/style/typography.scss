@@ -96,23 +96,3 @@ textarea,
 input {
   font-size: 100%;
 }
-
-::-webkit-input-placeholder {
-  font-style: italic;
-  color: '{{foreground-3}}';
-}
-
-:-moz-placeholder {
-  font-style: italic;
-  color: '{{foreground-3}}';
-}
-
-::-moz-placeholder {
-  font-style: italic;
-  color: '{{foreground-3}}';
-}
-
-:-ms-input-placeholder {  
-  font-style: italic;
-  color: '{{foreground-3}}';
-}

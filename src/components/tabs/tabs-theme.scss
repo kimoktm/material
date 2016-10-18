@@ -78,7 +78,7 @@ md-tabs.md-THEME_NAME-theme {
   }
 
   .md-tab {
-    color: '{{foreground-1}}';
+    color: '{{foreground-4}}';
     &[disabled] {
       &, md-icon {
         color: '{{foreground-3}}';
@@ -86,7 +86,7 @@ md-tabs.md-THEME_NAME-theme {
     }
     &.md-active, &.md-focused {
       &, md-icon {
-        color: '{{primary-color}}';
+        color: '{{foreground-1}}';
       }
     }
     &.md-focused {
