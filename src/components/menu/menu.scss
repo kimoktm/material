@@ -13,7 +13,7 @@ $max-dense-menu-height: 2 * $baseline-grid + $max-visible-items * $dense-menu-it
 
   md-menu-divider {
     margin-top: $baseline-grid / 2;
-    margin-bottom: $baseline-grid / 2;
+    margin-bottom: $baseline-grid / 4;
     height: 1px;
     min-height: 1px;
     max-height: 1px;

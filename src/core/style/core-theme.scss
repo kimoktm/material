@@ -5,5 +5,54 @@ html, body {
     color: '{{foreground-1}}';
     background-color: '{{background-color}}';
   }
-}
 
+  .md-THEME_NAME-theme {
+	  &a {
+	  	color: '{{primary-color}}';
+	  }
+
+	  &.md-color-white {
+	    color: #fff;  
+	  }
+
+	  &.md-color-primary {
+	    color: '{{primary-color}}';
+	  }
+
+	  &.md-color-foreground {
+	    color: '{{foreground-1}}';
+	  }
+
+	  &.md-color-disabled {
+	    color: '{{foreground-3}}';
+	  }
+
+	  &.md-color-white svg path,
+	  &.md-color-white svg rect,
+	  &.md-color-white svg circle,
+	  &.md-color-white svg polygon {
+	    fill: #fff;
+	  }
+
+	  &.md-color-primary svg path,
+	  &.md-color-primary svg rect,
+	  &.md-color-primary svg circle,
+	  &.md-color-primary svg polygon {
+	    fill: '{{primary-color}}';
+	  }
+
+	  &.md-color-foreground svg path,
+	  &.md-color-foreground svg rect,
+	  &.md-color-foreground svg circle,
+	  &.md-color-foreground svg polygon {
+	    fill: '{{foreground-1}}';
+	  }
+
+	  &.md-color-disabled svg path,
+	  &.md-color-disabled svg rect,
+	  &.md-color-disabled svg circle,
+	  &.md-color-disabled svg polygon {
+	    fill: '{{foreground-3}}';
+	  }
+  }
+}

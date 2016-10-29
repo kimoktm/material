@@ -85,6 +85,8 @@ md-input-container.md-THEME_NAME-theme {
     &[disabled],
     [disabled] & {
       cursor: not-allowed;
+      -webkit-opacity: 1; 
+      -webkit-text-fill-color: '{{foreground-3}}';
       color: '{{foreground-3}}';
       border-color: '{{foreground-3}}';
       // border-bottom-color: transparent;
